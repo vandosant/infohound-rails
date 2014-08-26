@@ -1,5 +1,5 @@
 Description:    
-A news aggregator.  
+A news aggregator.
 [Live Demo](http://infohound.herokuapp.com)
 
 Usage:
