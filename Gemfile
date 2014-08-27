@@ -16,3 +16,8 @@ group :development, :test do
 end
 
 gem 'rails_12factor', group: :production
+
+group :test do
+  gem 'vcr', '~> 2.9.0'
+  gem 'webmock', '~> 1.17.4'
+end
