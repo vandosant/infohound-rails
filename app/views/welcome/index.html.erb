@@ -1,2 +1,12 @@
 <div class="logo">Welcome to infohound</div>
-<section class="feed">Digg</section>
+<section class="feed">
+  <h3>Digg</h3>
+
+  <div class="stories">
+    <% @digg_stories.each do |story| %>
+      <div class="story">
+        <%= link_to story[1][:title], story[1][:link] %>
+      </div>
+    <% end %>
+  </div>
+</section>
