@@ -6,7 +6,22 @@
     <% @digg_stories.each do |story| %>
       <div class="story">
         <%= link_to story[1][:title], story[1][:link] %>
+        <span class="story-description hidden"><%= story[1][:description] %></span>
       </div>
     <% end %>
   </div>
 </section>
+
+<script>
+  $(document).ready(function () {
+    var stories = document.getElementsByClassName("story");
+    $(stories).each(function () {
+      this.addEventListener("mouseenter", function (event) {
+        $(event.target).children(".story-description").removeClass("hidden");
+      });
+      this.addEventListener("mouseleave", function (event) {
+        $(event.target).children(".story-description").addClass("hidden");
+      });
+    });
+  });
+</script>
